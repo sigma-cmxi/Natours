@@ -12,3 +12,18 @@
 html {
     font-size: 62.5%;
 }
+body {
+    font-family: "lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #777;
+    padding: 2%;
+}
+.header {
+    position: relative;
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, #7ed56f80, #28b48580 ), url(../imgs/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon( 0 0, 100% 0, 100% 80%, 0 100%);
+}
