@@ -17,7 +17,7 @@ body {
     font-weight: 400;
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
 }
 ::selection {
     background-color: #55c57a;
@@ -111,6 +111,19 @@ body {
     }
     100% {
         transform: translateX(0);
+        opacity: 1;
+    }
+}
+.header-content a {
+    animation: fadein .5s ease-out .75s backwards;
+}
+@keyframes fadein {
+    from {
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
         opacity: 1;
     }
 }
