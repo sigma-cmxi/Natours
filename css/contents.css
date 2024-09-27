@@ -13,11 +13,11 @@
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     transform: translateY(-0.5rem);
 }
-.btn-white {
+.btn--white {
     background-color: white;
     color: #777;
 }
-.button-animation::before {
+.button--animation::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -29,7 +29,7 @@
     z-index: -1;
     transition: all linear 0.4s;
 }
-.button-animation:hover:before {
+.button--animation:hover:before {
     opacity: 0;
     transform: scale(1.5);
 }

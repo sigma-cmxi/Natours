@@ -33,7 +33,7 @@ body {
     background-position: top;
     clip-path: polygon( 0 0, 100% 0, 100% 75vh, 0 100%);
 }
-.header .logo {
+.header__logo {
     position: absolute;
     top: 3rem;
     left: 3rem;
@@ -56,10 +56,10 @@ body {
     }
     }
 
-.header .logo img {
+.header__logo img {
     max-height: 100%;
 }
-.header .header-content {
+.header .header__content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,7 +78,7 @@ body {
     text-transform: uppercase;
     backface-visibility: hidden;
 }
-.marketing-message .marketing-message-primary {
+.marketing-message .marketing-message--primary {
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
@@ -97,7 +97,7 @@ body {
         opacity: 1;
     }
 }
-.marketing-message .marketing-message-secondary {
+.marketing-message .marketing-message--secondary {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
@@ -116,7 +116,7 @@ body {
         opacity: 1;
     }
 }
-.header-content a {
+.header__content a {
     animation: fadein .5s ease-out .75s backwards;
 }
 @keyframes fadein {
