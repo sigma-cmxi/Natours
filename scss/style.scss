@@ -1,0 +1,82 @@
+@import "contents";
+@import "animations";
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #777;
+    padding: 3rem;
+}
+::selection {
+    background-color: $Medium-green;
+    color: $white;
+}
+.header {
+    position: relative;
+    height: 95vh;
+    background-image: linear-gradient(
+            to right bottom,
+            rgba($Light-green, .8),
+            rgba($Dark-green, .8)
+        ),
+        url(../imgs/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    .header__logo {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+        height: 3.5rem;
+        width: auto;
+        animation: rotate 1s ease-in-out;
+        img {
+            max-height: 100%;
+        }
+    }
+    .header__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        gap: 6rem;
+        transform: translate(-50%, -50%);
+        a {
+            animation: fadein 0.5s ease-out 0.75s backwards;
+        }
+        .marketing-message {
+            display: flex;
+            flex-direction: column;
+            color: $white;
+            text-align: center;
+            text-transform: uppercase;
+            backface-visibility: hidden;
+            .marketing-message--primary {
+                font-size: 6rem;
+                font-weight: 400;
+                letter-spacing: 3.5rem;
+                animation: fade-in 1s ease-in-out;
+            }
+            .marketing-message--secondary {
+                font-size: 2rem;
+                font-weight: 700;
+                letter-spacing: 1.75rem;
+                animation: fade-out 1s ease-out;
+            }
+        }
+    }
+}
