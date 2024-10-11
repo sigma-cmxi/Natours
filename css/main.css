@@ -1,41 +1,3 @@
-.btn {
-  position: relative;
-  padding: 1.5rem 4rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: fit-content;
-  font-size: 1.6rem;
-  border-radius: 10rem;
-  cursor: pointer;
-  transition: all linear 0.2s;
-}
-.btn:hover {
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-  transform: translateY(-0.5rem);
-}
-
-.btn--white {
-  background-color: white;
-  color: #777;
-}
-
-.button--animation::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(229.5, 229.5, 229.5);
-  top: 0;
-  left: 0;
-  border-radius: inherit;
-  z-index: -1;
-  transition: all linear 0.4s;
-}
-.button--animation:hover:before {
-  opacity: 0;
-  transform: scale(1.5);
-}
-
 @keyframes rotate {
   0% {
     rotate: 0;
@@ -111,6 +73,63 @@ body {
   color: white;
 }
 
+.marketing-message {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+}
+.marketing-message--primary {
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  animation: fade-in 1s ease-in-out;
+}
+.marketing-message--secondary {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  animation: fade-out 1s ease-out;
+}
+
+.btn {
+  position: relative;
+  padding: 1.5rem 4rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: fit-content;
+  font-size: 1.6rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all linear 0.2s;
+}
+.btn:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.5rem);
+}
+.btn--white {
+  background-color: white;
+  color: #777;
+}
+.btn--animation::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(229.5, 229.5, 229.5);
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  z-index: -1;
+  transition: all linear 0.4s;
+}
+.btn--animation:hover:before {
+  opacity: 0;
+  transform: scale(1.5);
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -119,7 +138,7 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
-.header .header__logo {
+.header__logo {
   position: absolute;
   top: 4rem;
   left: 4rem;
@@ -127,10 +146,10 @@ body {
   width: auto;
   animation: rotate 1s ease-in-out;
 }
-.header .header__logo img {
+.header__logo img {
   max-height: 100%;
 }
-.header .header__content {
+.header__content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,28 +160,8 @@ body {
   gap: 6rem;
   transform: translate(-50%, -50%);
 }
-.header .header__content a {
+.header__content a {
   animation: fadein 0.5s ease-out 0.75s backwards;
 }
-.header .header__content .marketing-message {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-}
-.header .header__content .marketing-message .marketing-message--primary {
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation: fade-in 1s ease-in-out;
-}
-.header .header__content .marketing-message .marketing-message--secondary {
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-  animation: fade-out 1s ease-out;
-}
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */
