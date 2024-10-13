@@ -70,13 +70,13 @@ body {
 
 ::selection {
   background-color: #55c57a;
-  color: white;
+  color: #fff;
 }
 
 .marketing-message {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: #fff;
   text-align: center;
   text-transform: uppercase;
   backface-visibility: hidden;
@@ -92,6 +92,30 @@ body {
   font-weight: 700;
   letter-spacing: 1.75rem;
   animation: fade-out 1s ease-out;
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+}
+.heading-secondary:hover {
+  transform: skew(15deg, 2deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-8 {
+  margin-bottom: 8rem;
 }
 
 .btn {
@@ -110,7 +134,7 @@ body {
   transform: translateY(-0.5rem);
 }
 .btn--white {
-  background-color: white;
+  background-color: #fff;
   color: #777;
 }
 .btn--animation::before {
@@ -162,6 +186,20 @@ body {
 }
 .header__content a {
   animation: fadein 0.5s ease-out 0.75s backwards;
+}
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -25vh;
+}
+.section-about__content {
+  max-width: 114rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 6rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
 }
 
 /*# sourceMappingURL=main.css.map */
