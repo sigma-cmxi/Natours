@@ -1,49 +1,65 @@
 body {
-    font-family: "lato", sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
-    color: #777;
-    padding: 3rem;
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
 }
 ::selection {
-    background-color: $color-primary;
-    color: $color-white;
+  background-color: $color-primary;
+  color: $color-white;
 }
 .marketing-message {
-    display: flex;
-    flex-direction: column;
-    color: $color-white;
-    text-align: center;
-    text-transform: uppercase;
-    backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  color: $color-white;
+  text-align: center;
+  text-transform: uppercase;
+  backface-visibility: hidden;
 
-    &--primary {
-        font-size: 6rem;
-        font-weight: 400;
-        letter-spacing: 3.5rem;
-        animation: fade-in 1s ease-in-out;
-    }
+  &--primary {
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation: fade-in 1s ease-in-out;
+  }
 
-    &--secondary {
-        font-size: 2rem;
-        font-weight: 700;
-        letter-spacing: 1.75rem;
-        animation: fade-out 1s ease-out;
-    }
+  &--secondary {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: fade-out 1s ease-out;
+  }
 }
 .heading-secondary {
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    display: inline-block;
-    background-image: linear-gradient(to right , $color-primary-light, $color-primary-dark);
-    background-clip: text;
-    color: transparent;
-    letter-spacing: .2rem;
-    transition: all .2s;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
 
-    &:hover {
-        transform: skew(15deg, 2deg) scale(1.1);
-        text-shadow: .5rem 1rem 2rem rgb($color-black, .2);
-    }
+  &:hover {
+    transform: skew(15deg, 2deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgb($color-black, 0.2);
+  }
+}
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.paragraph {
+  font-size: $default-font-size;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
 }

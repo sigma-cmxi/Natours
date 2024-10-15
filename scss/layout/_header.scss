@@ -1,42 +1,42 @@
 .header {
-    position: relative;
-    height: 95vh;
-    background-image: linear-gradient(
-            to right bottom,
-            rgba($color-primary-light, 0.8),
-            rgba($color-primary-dark, 0.8)
-        ),
-        url(../imgs/hero.jpg);
-    background-size: cover;
-    background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../imgs/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
-    &__logo {
-        position: absolute;
-        top: 4rem;
-        left: 4rem;
-        height: 3.5rem;
-        width: auto;
-        animation: rotate 1s ease-in-out;
+  &__logo {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    height: 3.5rem;
+    width: auto;
+    animation: rotate 1s ease-in-out;
 
-        img {
-            max-height: 100%;
-        }
+    img {
+      max-height: 100%;
     }
+  }
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        position: absolute;
-        left: 50%;
-        top: 40%;
-        gap: 6rem;
-        transform: translate(-50%, -50%);
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    gap: 6rem;
+    transform: translate(-50%, -50%);
 
-        a {
-            animation: fadein 0.5s ease-out 0.75s backwards;
-        }
+    a {
+      animation: fadein 0.5s ease-out 0.75s backwards;
     }
+  }
 }
