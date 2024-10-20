@@ -14,12 +14,12 @@
     transform: translateY(-0.5rem);
   }
 
-  &--white {
+  &-white {
     background-color: $color-white;
     color: $color-grey-dark;
   }
 
-  &--animation {
+  &-animation {
     &::before {
       content: "";
       position: absolute;

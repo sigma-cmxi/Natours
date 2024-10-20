@@ -1,0 +1,13 @@
+.card {
+  background-color: rgba($color-white, 0.8);
+  font-size: 1.5rem;
+  padding: 4rem 3rem;
+  text-align: center;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  border-radius: 3px;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.05) translateY(-1.5rem);
+  }
+}
