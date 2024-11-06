@@ -148,15 +148,15 @@ body {
 }
 
 .u-layout-grid-2 {
-  grid-template-columns: repeat(2, minmax(auto, 1fr));
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .u-layout-grid-3 {
-  grid-template-columns: repeat(3, minmax(auto, 1fr));
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .u-layout-grid-4 {
-  grid-template-columns: repeat(4, minmax(auto, 1fr));
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .btn {
@@ -252,6 +252,38 @@ body {
 }
 
 .card {
+  perspective: 150rem;
+  position: relative;
+  height: 52rem;
+}
+.card_side {
+  height: 52rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.card_side-front {
+  background-color: #fff;
+}
+.card_side-back {
+  background-color: blue;
+  transform: rotateY(180deg);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+.card_side-back-1 {
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+.card:hover .card_side-front {
+  transform: rotateY(180deg);
+}
+.card:hover .card_side-back {
+  transform: rotateY(0deg);
+}
+
+.feature-box {
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem;
   padding: 4rem 3rem;
@@ -260,8 +292,15 @@ body {
   border-radius: 3px;
   transition: all 0.3s;
 }
-.card:hover {
+.feature-box:hover {
   transform: scale(1.05) translateY(-1.5rem);
+}
+.feature-box_icon {
+  font-size: 5rem;
+  margin-bottom: 2.5rem;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-clip: text;
+  color: transparent;
 }
 
 .header {
@@ -303,6 +342,7 @@ body {
   padding: 25rem 0;
   margin-top: -25vh;
 }
+
 .section-features {
   padding: 20rem 0;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../imgs/nat-4.jpg);
@@ -314,12 +354,11 @@ body {
 .section-features_content {
   transform: skewy(7deg);
 }
-.section-features_content_icon {
-  font-size: 5rem;
-  margin-bottom: 2.5rem;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
-  background-clip: text;
-  color: transparent;
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 25rem 0 50rem;
+  margin-top: -10rem;
 }
 
 /*# sourceMappingURL=main.css.map */
