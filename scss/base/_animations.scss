@@ -1,17 +1,16 @@
-@keyframes rotate {
+@keyframes roll-in-blurred-top {
   0% {
-    rotate: 0;
-  }
-  33% {
-    rotate: 180deg;
-  }
-  66% {
-    rotate: -180deg;
+    transform: translateY(-800px) rotate(-720deg);
+    filter: blur(50px);
+    opacity: 0;
   }
   100% {
-    rotate: 0deg;
+    transform: translateY(0) rotate(0deg);
+    filter: blur(0);
+    opacity: 1;
   }
 }
+
 @keyframes fade-in {
   0% {
     opacity: 0;

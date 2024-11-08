@@ -17,7 +17,7 @@
     left: 4rem;
     height: 3.5rem;
     width: auto;
-    animation: rotate 1s ease-in-out;
+    animation: roll-in-blurred-top 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
 
     img {
       max-height: 100%;
@@ -36,7 +36,7 @@
     transform: translate(-50%, -50%);
 
     a {
-      animation: fadein 0.5s ease-out 0.75s backwards;
+      animation: fadein 0.5s ease-out 0.81s backwards;
     }
   }
 }

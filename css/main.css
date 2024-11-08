@@ -1,15 +1,13 @@
-@keyframes rotate {
+@keyframes roll-in-blurred-top {
   0% {
-    rotate: 0;
-  }
-  33% {
-    rotate: 180deg;
-  }
-  66% {
-    rotate: -180deg;
+    transform: translateY(-800px) rotate(-720deg);
+    filter: blur(50px);
+    opacity: 0;
   }
   100% {
-    rotate: 0deg;
+    transform: translateY(0) rotate(0deg);
+    filter: blur(0);
+    opacity: 1;
   }
 }
 @keyframes fade-in {
@@ -95,6 +93,7 @@ body {
 }
 
 .heading-secondary {
+  cursor: default;
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -263,24 +262,70 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
   backface-visibility: hidden;
 }
 .card_side-front {
   background-color: #fff;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 .card_side-back {
   background-color: blue;
   transform: rotateY(180deg);
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }
 .card_side-back-1 {
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
 }
 .card:hover .card_side-front {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 .card:hover .card_side-back {
   transform: rotateY(0deg);
+}
+.card_picture {
+  background-size: cover;
+  height: 23rem;
+  background-blend-mode: screen;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.card_picture-1 {
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../../imgs/nat-5.jpg);
+}
+.card_heading {
+  width: 75%;
+  font-size: 2.8rem;
+  text-align: right;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
+}
+.card_heading-span {
+  padding: 1rem 1.5rem;
+  background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
+  box-decoration-break: clone;
+}
+.card_details {
+  padding: 3rem;
+}
+.card_details ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+}
+.card_details ul li {
+  text-align: center;
+  font-size: 1.5rem;
+  width: 80%;
+  padding: 1rem;
+}
+.card_details ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
 }
 
 .feature-box {
@@ -317,7 +362,7 @@ body {
   left: 4rem;
   height: 3.5rem;
   width: auto;
-  animation: rotate 1s ease-in-out;
+  animation: roll-in-blurred-top 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 .header_logo img {
   max-height: 100%;
@@ -334,7 +379,7 @@ body {
   transform: translate(-50%, -50%);
 }
 .header_content a {
-  animation: fadein 0.5s ease-out 0.75s backwards;
+  animation: fadein 0.5s ease-out 0.81s backwards;
 }
 
 .section-about {

@@ -10,29 +10,93 @@
     top: 0;
     left: 0;
     width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
     backface-visibility: hidden;
 
     &-front {
-        background-color: $color-white;
+      background-color: $color-white;
+      box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     }
 
     &-back {
-        background-color: blue;
-        transform: rotateY(180deg);
-        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+      background-color: blue;
+      transform: rotateY(180deg);
 
-        &-1 {
-          background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
-        }
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
     }
   }
 
   &:hover &_side-front {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
 
   &:hover &_side-back {
     transform: rotateY(0deg);
   }
 
+  &_picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &-1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url(../../imgs/nat-5.jpg);
+    }
+  }
+  &_heading {
+    width: 75%;
+    font-size: 2.8rem;
+    text-align: right;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $color-white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+
+    &-span {
+      padding: 1rem 1.5rem;
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.85),
+        rgba($color-secondary-dark, 0.85)
+      );
+      box-decoration-break: clone;
+    }
+  }
+  &_details {
+    padding: 3rem;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      list-style: none;
+      width: 100%;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        width: 80%;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-2;
+        }
+      }
+    }
+  }
 }
