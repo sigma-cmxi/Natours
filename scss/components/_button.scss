@@ -19,6 +19,11 @@
     color: $color-grey-dark;
   }
 
+  &-green {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+
   &-animation {
     &::before {
       content: "";
@@ -30,7 +35,13 @@
       left: 0;
       border-radius: inherit;
       z-index: -1;
-      transition: all linear 0.4s;
+      transition: all linear 0.3s;
+    }
+
+    &-green {
+      &::before {
+        background-color: rgb($color-primary, 0.8);
+      }
     }
 
     &:hover {
