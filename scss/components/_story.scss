@@ -1,0 +1,31 @@
+.story {
+  display: flex;
+  gap: 3rem;
+  width: 75%;
+  margin: 0 auto;
+  background-color: $color-white;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: $default-font-size;
+  transform: skewX(-12deg);
+
+  & > * {
+    transform: skewX(12deg);
+  }
+
+  &_shape {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &_text {
+    width: 75%;
+  }
+}
