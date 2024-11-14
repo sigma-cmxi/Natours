@@ -221,6 +221,7 @@ body {
   transform: translateY(0);
 }
 .btn-text {
+  width: fit-content;
   font-size: 1.6rem;
   color: #55c57a;
   display: inline-block;
@@ -427,14 +428,40 @@ body {
 .story > * {
   transform: skewX(12deg);
 }
+.story:hover .story_shape-name {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.story:hover .story_shape img {
+  transform: translate(-50%, -50%) scale(1);
+  filter: blur(3px) brightness(80%);
+}
 .story_shape {
+  position: relative;
   width: 15rem;
   height: 15rem;
   border-radius: 50%;
   overflow: hidden;
 }
+.story_shape-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  opacity: 0;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  text-align: center;
+  color: white;
+  transition: all 0.5s;
+}
 .story_shape img {
+  position: absolute;
   height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.4);
+  transition: all 0.5s;
 }
 .story_text {
   width: 75%;
@@ -501,6 +528,11 @@ body {
 .section-stories {
   padding: 15rem 0;
   background-color: #f7f7f7;
+}
+.section-stories_content {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
 }
 
 /*# sourceMappingURL=main.css.map */
