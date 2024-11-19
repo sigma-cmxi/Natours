@@ -30,8 +30,23 @@
   padding: 15rem 0;
 
   &_content {
+    max-width: 114rem;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 8rem;
+  }
+}
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+
+  &_content {
+    max-width: 114rem;
+    margin: 0 auto;
   }
 }
